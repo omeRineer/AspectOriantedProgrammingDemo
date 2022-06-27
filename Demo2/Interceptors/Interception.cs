@@ -1,7 +1,7 @@
 ﻿using Castle.DynamicProxy;
 using System;
 
-namespace DynamicProxyDemo.Interceptors
+namespace DynamicProxy.Interceptors
 {
     public class Interception : Attribute, IInterceptor
     {

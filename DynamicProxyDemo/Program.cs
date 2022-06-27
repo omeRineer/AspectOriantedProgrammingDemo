@@ -1,11 +1,11 @@
 ﻿using Autofac;
 using Autofac.Extras.DynamicProxy;
 using Castle.DynamicProxy;
-using DynamicProxyDemo.Concrete;
-using DynamicProxyDemo.Interceptors;
+using DynamicProxy.Concrete;
+using DynamicProxy.Interceptors;
 using System;
 
-namespace DynamicProxyDemo
+namespace DynamicProxy
 {
     internal class Program
     {

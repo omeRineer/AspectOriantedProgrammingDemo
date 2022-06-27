@@ -2,8 +2,8 @@
 using Autofac.Extras.DynamicProxy;
 using Castle.DynamicProxy;
 using Demo2.Interceptors;
-using DynamicProxyDemo.Concrete;
-using DynamicProxyDemo.Interceptors;
+using DynamicProxy.Concrete;
+using DynamicProxy.Interceptors;
 using System;
 
 namespace Demo2

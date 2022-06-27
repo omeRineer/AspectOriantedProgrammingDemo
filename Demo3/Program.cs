@@ -3,7 +3,7 @@ using Autofac.Extras.DynamicProxy;
 using Castle.DynamicProxy;
 using Demo3.Aspects;
 using Demo3.Interceptors;
-using DynamicProxyDemo.Concrete;
+using DynamicProxy.Concrete;
 using System;
 
 namespace Demo3

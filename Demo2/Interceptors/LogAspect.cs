@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamicProxyDemo.Interceptors
+namespace DynamicProxy.Interceptors
 {
     public class LogAspect : Interception
     {
