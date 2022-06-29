@@ -1,21 +1,21 @@
 ﻿using Autofac.Extras.DynamicProxy;
-using DynamicProxy.Abstract;
-using DynamicProxy.Interceptors;
+using Level_1.Abstract;
+using Level_1.Interceptor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamicProxy.Concrete
+namespace Level_1.Concrete
 {
-    [LogAspect]
-    [CacheAspect]
+    [Intercept(typeof(CacheInterceptor))]
+    [Intercept(typeof(ValidationInterceptor))]
     public class ProductManager : IProductService
     {
         public virtual void Add()
         {
-            Console.WriteLine("Product Added!");
+            Console.WriteLine("Product is added!");
         }
     }
 }
