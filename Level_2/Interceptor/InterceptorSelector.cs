@@ -1,5 +1,5 @@
 ﻿using Castle.DynamicProxy;
-using DynamicProxy.Interceptors;
+using Level_2.Aspects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,14 +7,14 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo2.Interceptors
+namespace Level_2.Interceptor
 {
-    public class AspectSelector : IInterceptorSelector
+    public class InterceptorSelector : IInterceptorSelector
     {
         public IInterceptor[] SelectInterceptors(Type type, MethodInfo method, IInterceptor[] interceptors)
         {
-            var attributes = type.GetCustomAttributes<Interception>(true).ToList();
-            return attributes.ToArray();
+            interceptors =new[] { new CacheAspect() };
+            return interceptors;
         }
     }
 }

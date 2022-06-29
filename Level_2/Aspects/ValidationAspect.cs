@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamicProxy.Interceptors
+namespace Level_2.Aspects
 {
-    public class LogAspect : IInterceptor
+    public class ValidationAspect : IInterceptor
     {
         public void Intercept(IInvocation invocation)
         {
-            Console.WriteLine("Log Aspect is Run \n");
+            Console.WriteLine("ValidationAspect is run");
             invocation.Proceed();
         }
     }

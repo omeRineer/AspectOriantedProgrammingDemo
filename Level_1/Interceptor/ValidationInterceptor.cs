@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamicProxy.Interceptors
+namespace Level_1.Interceptor
 {
-    public class CacheAspect : IInterceptor
+    public class ValidationInterceptor : IInterceptor
     {
         public void Intercept(IInvocation invocation)
         {
-            Console.WriteLine("Cache is upload \n");
+            Console.WriteLine("Validation interceptor is run");
             invocation.Proceed();
         }
     }

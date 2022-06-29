@@ -1,21 +1,17 @@
-﻿using Autofac.Extras.DynamicProxy;
-using Demo3.Aspects;
-using DynamicProxy.Abstract;
+﻿using Level_2.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamicProxy.Concrete
+namespace Level_2.Concrete
 {
-    [LogAspect]
-    [ValidationAspect]
     public class ProductManager : IProductService
     {
         public virtual void Add()
         {
-            Console.WriteLine("Product Added!");
+            Console.WriteLine("Product is added!");
         }
     }
 }

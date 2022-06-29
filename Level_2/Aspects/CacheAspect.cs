@@ -1,16 +1,17 @@
 ﻿using Castle.DynamicProxy;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamicProxy.Interceptors
+namespace Level_2.Aspects
 {
-    public class LogAspect : Interception
+    public class CacheAspect : IInterceptor
     {
-        public override void Intercept(IInvocation invocation)
+        public void Intercept(IInvocation invocation)
         {
-            System.Console.WriteLine("LogAspect is run");
+            Console.WriteLine("CacheAspect is run");
             invocation.Proceed();
         }
     }
