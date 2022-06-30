@@ -11,7 +11,7 @@ namespace Level_2.Concrete
     {
         public virtual void Add()
         {
-            Console.WriteLine("Product is added!");
+            Console.WriteLine("Product is added");
         }
     }
 }
