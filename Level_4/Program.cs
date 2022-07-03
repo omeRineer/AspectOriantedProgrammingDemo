@@ -16,8 +16,9 @@ namespace Level_4
             Console.ForegroundColor = ConsoleColor.Green;
 
             var container = new ContainerBuilder();
-            container.RegisterType<ProductManager>()
-                .As<IProductService>()
+            var assembly=Assembly.GetExecutingAssembly();
+            container.RegisterAssemblyTypes(assembly)
+                .AsImplementedInterfaces()
                 .EnableInterfaceInterceptors(new ProxyGenerationOptions
                 {
                     Selector=new InterceptorSelector()
