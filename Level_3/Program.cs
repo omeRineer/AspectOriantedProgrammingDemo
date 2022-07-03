@@ -19,14 +19,14 @@ namespace Level_3
             var container = new ContainerBuilder();
             container.RegisterType<ProductManager>()
                 .As<IProductService>()
-                .EnableClassInterceptors(new ProxyGenerationOptions { Selector = new InterceptorSelector() })
+                .EnableInterfaceInterceptors(new ProxyGenerationOptions { Selector = new InterceptorSelector() })
                 .SingleInstance();
 
             var build = container.Build().BeginLifetimeScope();
             var item = build.Resolve<IProductService>();
-
             item.Add();
             item.Delete();
+            
 
             Console.WriteLine("\n \n \n \n \n \n=====================================");
             Console.ResetColor();

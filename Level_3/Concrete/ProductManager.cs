@@ -16,6 +16,7 @@ namespace Level_3.Concrete
         [ValidationAspect]
         public void Add()
         {
+            TestDemo();
             Console.WriteLine("Product is added!");
         }
 
@@ -25,6 +26,14 @@ namespace Level_3.Concrete
         public virtual void Delete()
         {
             Console.WriteLine("Product is deleted!");
+        }
+
+        [LogAspect]
+        [CacheAspect]
+        [ValidationAspect]
+        public virtual void TestDemo()
+        {
+            Console.WriteLine("TestDemo is run");
         }
     }
 }

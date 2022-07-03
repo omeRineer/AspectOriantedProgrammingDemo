@@ -13,7 +13,7 @@ namespace Level_3.Interceptor
     {
         public IInterceptor[] SelectInterceptors(Type type, MethodInfo method, IInterceptor[] interceptors)
         {
-            var methodInterceptors = method.GetCustomAttributes<InterceptorAspect>(true);
+            var methodInterceptors = type.GetMethod(method.Name).GetCustomAttributes<InterceptorAspect>(true);
             return methodInterceptors.ToArray();
         }
     }
