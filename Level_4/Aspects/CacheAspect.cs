@@ -10,6 +10,9 @@ namespace Level_4.Aspects
 {
     public class CacheAspect : InterceptorAspect
     {
-        
+        protected override void OnAfter(IInvocation invocation)
+        {
+            Console.WriteLine($"{invocation.Method.Name} metodu cachee eklendi");
+        }
     }
 }

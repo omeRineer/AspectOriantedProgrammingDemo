@@ -10,6 +10,9 @@ namespace Level_4.Aspects
 {
     public class ValidationAspect : InterceptorAspect
     {
-       
+        protected override void OnBefore(IInvocation invocation)
+        {
+            Console.WriteLine($"{invocation.Method.Name} metodu için validation çalıştı");
+        }
     }
 }

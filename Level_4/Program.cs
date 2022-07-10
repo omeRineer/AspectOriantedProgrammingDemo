@@ -17,6 +17,7 @@ namespace Level_4
 
             var container = new ContainerBuilder();
             var assembly=Assembly.GetExecutingAssembly();
+            container.RegisterType<ProductManager>().As<IProductService>().SingleInstance();
             container.RegisterAssemblyTypes(assembly)
                 .AsImplementedInterfaces()
                 .EnableInterfaceInterceptors(new ProxyGenerationOptions
@@ -29,6 +30,7 @@ namespace Level_4
             var item = build.Resolve<IProductService>();
 
             item.Add();
+            Console.WriteLine("***************");
             item.Delete();
 
             Console.WriteLine("\n \n \n \n \n \n=====================================");
