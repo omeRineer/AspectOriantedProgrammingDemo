@@ -13,8 +13,16 @@ namespace Level_4.Interceptor
     {
         public IInterceptor[] SelectInterceptors(Type type, MethodInfo method, IInterceptor[] interceptors)
         {
-            var methodInterceptors = type.GetMethod(method.Name).GetCustomAttributes<InterceptorAspect>(true);
-            return methodInterceptors.ToArray();
+            var methodInterceptors = type.GetMethod(method.Name).GetCustomAttributes<InterceptorAspect>(true).ToList();
+            var classInterceptors = type.GetCustomAttributes<InterceptorAspect>(true).ToList();
+            classInterceptors.AddRange(methodInterceptors);
+
+            classInterceptors.AddRange(new List<InterceptorAspect>
+            {
+                new LogAspect()
+            });
+
+            return classInterceptors.ToArray();
         }
     }
 }
