@@ -12,22 +12,22 @@ namespace Level_4.Aspects
     {
         protected override void OnBefore(IInvocation invocation)
         {
-            Console.WriteLine($"{invocation.Method.Name} metodu çalıştı");
+            Console.WriteLine($"Log Kaydı : {invocation.Method.Name} metodu çalıştı");
         }
 
         protected override void OnException(IInvocation invocation, Exception e)
         {
-            Console.WriteLine($"{invocation.Method.Name} metodu hata verdi");
+            Console.WriteLine($"Log Kaydı : {invocation.Method.Name} metodu hata verdi");
         }
 
         protected override void OnSuccess(IInvocation invocation)
         {
-            Console.WriteLine($"{invocation.Method.Name} metodu başarıyla çalıştı");
+            Console.WriteLine($"Log Kaydı : {invocation.Method.Name} metodu başarıyla çalıştı");
         }
 
         protected override void OnAfter(IInvocation invocation)
         {
-            Console.WriteLine($"{invocation.Method.Name} metodu sona erdi");
+            Console.WriteLine($"Log Kaydı : {invocation.Method.Name} metodu sona erdi");
         }
     }
 }

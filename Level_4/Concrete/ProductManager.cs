@@ -11,7 +11,6 @@ namespace Level_4.Concrete
 {
     public class ProductManager : IProductService
     {
-        [LogAspect]
         [CacheAspect]
         [ValidationAspect]
         public void Add()
@@ -19,7 +18,6 @@ namespace Level_4.Concrete
             Console.WriteLine("Product is added!");
         }
 
-        [LogAspect]
         [CacheAspect]
         [ValidationAspect]
         public virtual void Delete()

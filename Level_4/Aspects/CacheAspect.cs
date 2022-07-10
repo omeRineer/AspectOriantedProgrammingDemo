@@ -12,7 +12,7 @@ namespace Level_4.Aspects
     {
         protected override void OnAfter(IInvocation invocation)
         {
-            Console.WriteLine($"{invocation.Method.Name} metodu cachee eklendi");
+            Console.WriteLine($"{invocation.Method.Name} metodu cache'e eklendi");
         }
     }
 }
